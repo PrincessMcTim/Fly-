@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Texture/Ground/sandCliff_right.png" type="Texture" id=1]
+[ext_resource path="res://Ghost.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), null, ExtResource( 1 ), null ],
+"loop": true,
+"name": "Ghost",
+"speed": 7.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 63.9218, 63.8761 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 53.8626, 69.2925 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( -63.481, -63.3823, -63.481, 63.0962, -44.0228, 62.1697, -17.1519, 56.6102, 5.54941, 50.1241, 27.3241, 39.0051, 41.2228, 27.8861, 54.195, 11.6709, 61.1444, -5.00757, 64.3874, -28.6354, 64.3874, -50.4101, 61.6077, -56.8962, 56.9747, -61.9924, 48.1722, -63.3823 )
+
+[node name="Ghost" type="AnimatedSprite"]
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 4 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

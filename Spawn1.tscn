@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://GhostR.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Texture/Ground/sandCliff_right.png" type="Texture" id=2]
+[ext_resource path="res://Ghost.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Texture/Ground/sandMid.png" type="Texture" id=4]
+[ext_resource path="res://GhostL.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Texture/Ground/sandCliff_left.png" type="Texture" id=6]
+[ext_resource path="res://Blocks.tscn" type="PackedScene" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), null, ExtResource( 2 ), null ],
+"loop": true,
+"name": "Ghost",
+"speed": 7.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ null, ExtResource( 4 ), null, ExtResource( 4 ) ],
+"loop": true,
+"name": "Ghost",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), null, ExtResource( 6 ), null ],
+"loop": true,
+"name": "Ghost",
+"speed": 7.0
+} ]
+
+[sub_resource type="PhysicsMaterial" id=4]
+bounce = 0.2
+
+[node name="Spawn1" type="Node2D"]
+
+[node name="Ghost71" parent="." instance=ExtResource( 1 )]
+position = Vector2( 127.197, 249.927 )
+frames = SubResource( 1 )
+
+[node name="Ghost89" parent="." instance=ExtResource( 3 )]
+position = Vector2( -0.80304, 249.927 )
+frames = SubResource( 2 )
+
+[node name="Ghost80" parent="." instance=ExtResource( 5 )]
+position = Vector2( -128.803, 249.927 )
+frames = SubResource( 3 )
+
+[node name="Blocks204" parent="." instance=ExtResource( 7 )]
+position = Vector2( -128.416, -6.73416 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks186" parent="." instance=ExtResource( 7 )]
+position = Vector2( -129.553, -135.317 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks171" parent="." instance=ExtResource( 7 )]
+position = Vector2( -128.803, 121.567 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks222" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1.25507, -6.62625 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks242" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0.696228, -135.287 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks212" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0.886902, 121.617 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks213" parent="." instance=ExtResource( 7 )]
+position = Vector2( 130.755, -6.62857 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks249" parent="." instance=ExtResource( 7 )]
+position = Vector2( 133.445, -135.539 )
+physics_material_override = SubResource( 4 )
+
+[node name="Blocks247" parent="." instance=ExtResource( 7 )]
+position = Vector2( 130.047, 121.635 )
+physics_material_override = SubResource( 4 )

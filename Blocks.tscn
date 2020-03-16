@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Blocks.gd" type="Script" id=1]
+[ext_resource path="res://Texture/sloth.png" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=4]
+bounce = 0.2
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.1061, 63.7036 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -57.1907, 63.7707, 58.4552, 63.9644, 60.7798, 62.8021, 62.9106, 61.0587, 64.2666, 58.3468, 64.0729, -58.2678, 62.9106, -61.1735, 60.1986, -63.3043, 56.9055, -64.0791, -57.9656, -63.8854, -60.8713, -63.1106, -62.6147, -61.1735, -63.5832, -58.6552, -63.5832, 57.9593, -62.421, 61.2524, -60.0964, 62.9958 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 72.0503, 74.0312 )
+
+[node name="Blocks" type="RigidBody2D"]
+z_index = 1
+physics_material_override = SubResource( 4 )
+gravity_scale = 3.0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 5 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

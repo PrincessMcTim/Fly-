@@ -1,0 +1,326 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cloud.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cloud4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cloud3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cloud2.tscn" type="PackedScene" id=4]
+
+[node name="Clouds" type="Node2D"]
+position = Vector2( 1636, 103 )
+
+[node name="Cloud" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6978, -1566 )
+scale = Vector2( 3, 3 )
+z_index = -1
+
+[node name="Cloud56" parent="." instance=ExtResource( 1 )]
+position = Vector2( -14130, -1893 )
+scale = Vector2( 3, 3 )
+z_index = -1
+
+[node name="Cloud19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6130, -836 )
+z_index = -1
+
+[node name="Cloud15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9388, -1828 )
+z_index = -1
+
+[node name="Cloud54" parent="." instance=ExtResource( 1 )]
+position = Vector2( -11720, -2155 )
+z_index = -1
+
+[node name="Cloud7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5350, -1470 )
+z_index = -1
+
+[node name="Cloud11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1444, -2903 )
+scale = Vector2( 2, 2 )
+z_index = -1
+
+[node name="Cloud73" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8244, -3177 )
+scale = Vector2( 2, 2 )
+z_index = -1
+
+[node name="Cloud49" parent="." instance=ExtResource( 1 )]
+position = Vector2( -5341, -1232 )
+scale = Vector2( 2, 2 )
+z_index = -1
+
+[node name="Cloud24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5946, -3437 )
+z_index = -1
+
+[node name="Cloud67" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3742, -3711 )
+z_index = -1
+
+[node name="Cloud43" parent="." instance=ExtResource( 1 )]
+position = Vector2( -839, -1766 )
+z_index = -1
+
+[node name="Cloud4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6744, -1031 )
+z_index = -1
+
+[node name="Cloud52" parent="." instance=ExtResource( 2 )]
+position = Vector2( -14364, -1358 )
+z_index = -1
+
+[node name="Cloud20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1637, -1284 )
+scale = Vector2( 3, 3 )
+z_index = -1
+SPEED = 60
+
+[node name="Cloud27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6061, -1433 )
+z_index = -1
+
+[node name="Cloud55" parent="." instance=ExtResource( 2 )]
+position = Vector2( -15047, -1760 )
+z_index = -1
+
+[node name="Cloud35" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2883, -3003 )
+z_index = -1
+
+[node name="Cloud72" parent="." instance=ExtResource( 2 )]
+position = Vector2( -12571, -3277 )
+z_index = -1
+
+[node name="Cloud48" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9668, -1332 )
+z_index = -1
+
+[node name="Cloud31" parent="." instance=ExtResource( 2 )]
+position = Vector2( -19, -870 )
+z_index = -1
+
+[node name="Cloud16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8328, -659 )
+z_index = -1
+
+[node name="Cloud53" parent="." instance=ExtResource( 2 )]
+position = Vector2( -12780, -986 )
+z_index = -1
+
+[node name="Cloud8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3089, -724 )
+z_index = -1
+
+[node name="Cloud12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2787, -1988 )
+z_index = -1
+
+[node name="Cloud26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 284, -2774 )
+z_index = -2
+
+[node name="Cloud70" parent="." instance=ExtResource( 2 )]
+position = Vector2( -9404, -3048 )
+z_index = -2
+
+[node name="Cloud46" parent="." instance=ExtResource( 2 )]
+position = Vector2( -6501, -1103 )
+z_index = -2
+
+[node name="Cloud34" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1580, -3787 )
+z_index = -1
+
+[node name="Cloud75" parent="." instance=ExtResource( 2 )]
+position = Vector2( -11268, -4061 )
+z_index = -1
+
+[node name="Cloud51" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8365, -2116 )
+z_index = -1
+
+[node name="Cloud30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 703, -1739 )
+z_index = -1
+
+[node name="Cloud21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3851, -2718 )
+z_index = -1
+
+[node name="Cloud65" parent="." instance=ExtResource( 2 )]
+position = Vector2( -5837, -2992 )
+z_index = -1
+
+[node name="Cloud40" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2934, -1047 )
+z_index = -1
+
+[node name="Cloud3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4976, -2133 )
+z_index = -1
+
+[node name="Cloud61" parent="." instance=ExtResource( 3 )]
+position = Vector2( -16132, -2460 )
+z_index = -1
+
+[node name="Cloud17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11180, -1845 )
+z_index = -1
+
+[node name="Cloud59" parent="." instance=ExtResource( 3 )]
+position = Vector2( -9928, -2172 )
+z_index = -1
+
+[node name="Cloud13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8166, -2172 )
+z_index = -1
+
+[node name="Cloud57" parent="." instance=ExtResource( 3 )]
+position = Vector2( -12942, -2499 )
+z_index = -1
+
+[node name="Cloud5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1948, -711 )
+z_index = -1
+
+[node name="Cloud28" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1739, -2650 )
+z_index = -1
+
+[node name="Cloud63" parent="." instance=ExtResource( 3 )]
+position = Vector2( -11427, -2924 )
+z_index = -1
+
+[node name="Cloud38" parent="." instance=ExtResource( 3 )]
+position = Vector2( -8524, -979 )
+z_index = -1
+
+[node name="Cloud37" parent="." instance=ExtResource( 3 )]
+position = Vector2( -757, -3020 )
+scale = Vector2( 3, 3 )
+z_index = -1
+SPEED = 55
+
+[node name="Cloud64" parent="." instance=ExtResource( 3 )]
+position = Vector2( -10445, -3294 )
+scale = Vector2( 3, 3 )
+z_index = -1
+SPEED = 55
+
+[node name="Cloud39" parent="." instance=ExtResource( 3 )]
+position = Vector2( -7542, -1349 )
+scale = Vector2( 3, 3 )
+z_index = -1
+SPEED = 55
+
+[node name="Cloud32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1304, -1270 )
+z_index = -2
+
+[node name="Cloud9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1895, -3530 )
+z_index = -1
+
+[node name="Cloud71" parent="." instance=ExtResource( 3 )]
+position = Vector2( -7793, -3804 )
+z_index = -1
+
+[node name="Cloud47" parent="." instance=ExtResource( 3 )]
+position = Vector2( -4890, -1859 )
+z_index = -1
+
+[node name="Cloud22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4504, -3619 )
+z_index = -1
+
+[node name="Cloud66" parent="." instance=ExtResource( 3 )]
+position = Vector2( -5184, -3893 )
+z_index = -1
+
+[node name="Cloud41" parent="." instance=ExtResource( 3 )]
+position = Vector2( -2281, -1948 )
+z_index = -1
+
+[node name="Cloud2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11022, -619 )
+z_index = -1
+
+[node name="Cloud62" parent="." instance=ExtResource( 4 )]
+position = Vector2( -10086, -946 )
+z_index = -1
+
+[node name="Cloud18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2053, -1739 )
+z_index = -2
+
+[node name="Cloud25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6675, -2005 )
+z_index = -1
+
+[node name="Cloud60" parent="." instance=ExtResource( 4 )]
+position = Vector2( -14433, -2332 )
+z_index = -1
+
+[node name="Cloud33" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1969, -3304 )
+z_index = -1
+
+[node name="Cloud68" parent="." instance=ExtResource( 4 )]
+position = Vector2( -11657, -3578 )
+z_index = -1
+
+[node name="Cloud44" parent="." instance=ExtResource( 4 )]
+position = Vector2( -8754, -1633 )
+z_index = -1
+
+[node name="Cloud29" parent="." instance=ExtResource( 4 )]
+position = Vector2( -151, -1498 )
+z_index = -1
+
+[node name="Cloud14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10186, -1113 )
+scale = Vector2( 2, 2 )
+z_index = -1
+SPEED = 70
+
+[node name="Cloud58" parent="." instance=ExtResource( 4 )]
+position = Vector2( -10922, -1440 )
+scale = Vector2( 2, 2 )
+z_index = -1
+SPEED = 70
+
+[node name="Cloud6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3134, -1349 )
+z_index = -2
+
+[node name="Cloud10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 26, -3499 )
+z_index = -1
+
+[node name="Cloud74" parent="." instance=ExtResource( 4 )]
+position = Vector2( -9662, -3773 )
+z_index = -1
+
+[node name="Cloud50" parent="." instance=ExtResource( 4 )]
+position = Vector2( -6759, -1828 )
+z_index = -1
+
+[node name="Cloud36" parent="." instance=ExtResource( 4 )]
+position = Vector2( 88, -4805 )
+z_index = -1
+
+[node name="Cloud69" parent="." instance=ExtResource( 4 )]
+position = Vector2( -9600, -5079 )
+z_index = -1
+
+[node name="Cloud45" parent="." instance=ExtResource( 4 )]
+position = Vector2( -6697, -3134 )
+z_index = -1
+
+[node name="Cloud23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5771, -2301 )
+z_index = -1
+
+[node name="Cloud42" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1014, -630 )
+z_index = -1
