@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Camera2D2.gd" type="Script" id=1]
 [ext_resource path="res://ljus/light.png" type="Texture" id=2]
@@ -30,6 +30,8 @@
 [ext_resource path="res://Button5.gd" type="Script" id=28]
 [ext_resource path="res://Texture/Hud/hud5.png" type="Texture" id=29]
 [ext_resource path="res://Hud.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Death Beb.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Death Bob.tscn" type="PackedScene" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64.231, 61.4199 )
@@ -68,10 +70,10 @@ shadow_item_cull_mask = 2
 
 [node name="Button" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
-margin_left = -2961.43
-margin_top = -1707.22
-margin_right = -2833.43
-margin_bottom = -1579.22
+margin_left = -3015.43
+margin_top = -1730.22
+margin_right = -2887.43
+margin_bottom = -1602.22
 texture_normal = ExtResource( 3 )
 script = ExtResource( 4 )
 __meta__ = {
@@ -80,28 +82,31 @@ __meta__ = {
 
 [node name="Button3" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
-margin_left = -2827.43
-margin_top = -1702.22
-margin_right = -2699.43
-margin_bottom = -1574.22
+margin_left = -2881.43
+margin_top = -1725.22
+margin_right = -2753.43
+margin_bottom = -1597.22
 texture_normal = ExtResource( 5 )
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button4" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
-margin_left = -2693.43
-margin_top = -1702.22
-margin_right = -2565.43
-margin_bottom = -1574.22
+margin_left = -2747.43
+margin_top = -1725.22
+margin_right = -2619.43
+margin_bottom = -1597.22
 texture_normal = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="Button5" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
-margin_left = -2561.43
-margin_top = -1702.22
-margin_right = -2433.43
-margin_bottom = -1574.22
+margin_left = -2615.43
+margin_top = -1725.22
+margin_right = -2487.43
+margin_bottom = -1597.22
 texture_normal = ExtResource( 29 )
 script = ExtResource( 28 )
 __meta__ = {
@@ -110,10 +115,10 @@ __meta__ = {
 
 [node name="Button2" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
-margin_left = -3102.43
-margin_top = -1706.22
-margin_right = -2974.43
-margin_bottom = -1578.22
+margin_left = -3156.43
+margin_top = -1729.22
+margin_right = -3028.43
+margin_bottom = -1601.22
 texture_normal = ExtResource( 9 )
 script = ExtResource( 10 )
 
@@ -124,7 +129,14 @@ position = Vector2( 2709.57, 1523.78 )
 position = Vector2( 3004.57, 1523.78 )
 
 [node name="Hud" parent="Camera/Camera2D2" instance=ExtResource( 30 )]
+visible = false
 position = Vector2( -1097.24, 190.174 )
+
+[node name="Death Beb" parent="Camera/Camera2D2" instance=ExtResource( 31 )]
+position = Vector2( -3004.51, 1522.36 )
+
+[node name="Death Bob" parent="Camera/Camera2D2" instance=ExtResource( 32 )]
+position = Vector2( -2741.66, 1524.47 )
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -238,17 +250,11 @@ position = Vector2( 101.401, 2664.7 )
 [node name="Ghost54" parent="GhostFloor" instance=ExtResource( 14 )]
 position = Vector2( 7599.39, -4645.93 )
 
-[node name="Ghost35" parent="GhostFloor" instance=ExtResource( 14 )]
-position = Vector2( 903.745, 3340.63 )
-
 [node name="Ghost16" parent="GhostFloor" instance=ExtResource( 15 )]
 position = Vector2( -26.5986, 2664.7 )
 
 [node name="Ghost52" parent="GhostFloor" instance=ExtResource( 15 )]
 position = Vector2( 7471.39, -4645.93 )
-
-[node name="Ghost33" parent="GhostFloor" instance=ExtResource( 15 )]
-position = Vector2( 775.745, 3340.63 )
 
 [node name="Ghost17" parent="GhostFloor" instance=ExtResource( 15 )]
 position = Vector2( -154.599, 2664.7 )
@@ -256,17 +262,11 @@ position = Vector2( -154.599, 2664.7 )
 [node name="Ghost50" parent="GhostFloor" instance=ExtResource( 15 )]
 position = Vector2( 7343.39, -4645.93 )
 
-[node name="Ghost31" parent="GhostFloor" instance=ExtResource( 15 )]
-position = Vector2( 647.745, 3340.63 )
-
 [node name="Ghost18" parent="GhostFloor" instance=ExtResource( 16 )]
 position = Vector2( -351, 1761.8 )
 
 [node name="Ghost48" parent="GhostFloor" instance=ExtResource( 16 )]
 position = Vector2( 7215.39, -4645.93 )
-
-[node name="Ghost30" parent="GhostFloor" instance=ExtResource( 16 )]
-position = Vector2( 519.745, 3340.63 )
 
 [node name="Ghost19" parent="GhostFloor" instance=ExtResource( 14 )]
 position = Vector2( 8726.53, -4845.04 )
@@ -604,17 +604,11 @@ frame = 1
 
 [node name="Blocks" type="Node2D" parent="."]
 
-[node name="Blocks" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( -832.708, 3468.66 )
-
 [node name="Blocks7" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( -228.049, 2535.34 )
 
 [node name="Blocks14" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7269.94, -4776.29 )
-
-[node name="Blocks11" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 574.295, 3211.27 )
 
 [node name="Blocks54" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1272.15, 1759.01 )
@@ -664,9 +658,6 @@ position = Vector2( -222.359, 2404.54 )
 [node name="Blocks141" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7270.39, -4906.37 )
 
-[node name="Blocks96" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 579.985, 3080.47 )
-
 [node name="Blocks51" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1278.2, 1629.31 )
 
@@ -681,9 +672,6 @@ position = Vector2( 3489.5, -2742.7 )
 
 [node name="Blocks39" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1119.73, 2629.85 )
-
-[node name="Blocks113" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 625.583, 3784.84 )
 
 [node name="Blocks240" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 3903.63, -2740.28 )
@@ -706,9 +694,6 @@ position = Vector2( -217.639, 2273.67 )
 [node name="Blocks154" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7271.39, -5036.37 )
 
-[node name="Blocks110" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 582.705, 2949.6 )
-
 [node name="Blocks50" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1282.08, 1498.22 )
 
@@ -723,9 +708,6 @@ position = Vector2( 3493.59, -2872.89 )
 
 [node name="Blocks43" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1119.73, 2500.03 )
-
-[node name="Blocks86" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 626.583, 3654.84 )
 
 [node name="Blocks239" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 3903.63, -2871.28 )
@@ -805,9 +787,6 @@ position = Vector2( 4589.86, -2066.94 )
 [node name="Blocks30" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1119.73, 2759.67 )
 
-[node name="Blocks87" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 623.583, 3914.84 )
-
 [node name="Blocks233" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 3906.63, -2611.28 )
 
@@ -826,26 +805,17 @@ position = Vector2( 1285.75, 2501.19 )
 [node name="Blocks23" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1242.45, 3368.75 )
 
-[node name="Blocks2" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( -684.492, 3482.17 )
-
 [node name="Blocks6" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1425.66, 3168.04 )
 
 [node name="Blocks21" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1390.65, 3382.26 )
 
-[node name="Blocks3" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( -879.568, 3646.96 )
-
 [node name="Blocks5" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( -84.3386, 2535.3 )
 
 [node name="Blocks12" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7415.65, -4775.33 )
-
-[node name="Blocks9" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 720.745, 3209.19 )
 
 [node name="Blocks61" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1418.01, 1758.7 )
@@ -895,9 +865,6 @@ position = Vector2( -80.4586, 2405.54 )
 [node name="Blocks132" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7412.39, -4905.37 )
 
-[node name="Blocks89" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 721.885, 3079.47 )
-
 [node name="Blocks58" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1419.42, 1627.89 )
 
@@ -912,9 +879,6 @@ position = Vector2( 3628.93, -2742.22 )
 
 [node name="Blocks37" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1263.73, 2627.51 )
-
-[node name="Blocks97" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 760.583, 3784.84 )
 
 [node name="Blocks179" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4037.63, -2740.28 )
@@ -937,9 +901,6 @@ position = Vector2( -81.5986, 2274.7 )
 [node name="Blocks146" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7410.39, -5036.37 )
 
-[node name="Blocks101" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 720.915, 2947.66 )
-
 [node name="Blocks64" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1420.2, 1495.6 )
 
@@ -954,9 +915,6 @@ position = Vector2( 3628.71, -2872.51 )
 
 [node name="Blocks44" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1263.73, 2494.7 )
-
-[node name="Blocks80" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 759.583, 3654.84 )
 
 [node name="Blocks205" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4036.63, -2870.28 )
@@ -1036,9 +994,6 @@ position = Vector2( 4721.38, -2066.76 )
 [node name="Blocks28" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1263.73, 2759.33 )
 
-[node name="Blocks116" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 760.583, 3914.84 )
-
 [node name="Blocks184" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4043.63, -2610.28 )
 
@@ -1054,20 +1009,11 @@ position = Vector2( 14258.6, -2435.29 )
 [node name="Blocks95" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1416.75, 2500.19 )
 
-[node name="Blocks22" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 1195.55, 3547.05 )
-
-[node name="Blocks4" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( -691.724, 3648.19 )
-
 [node name="Blocks8" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 59.9312, 2534.54 )
 
 [node name="Blocks13" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7559.39, -4775.37 )
-
-[node name="Blocks10" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 863.275, 3210.47 )
 
 [node name="Blocks73" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1559.87, 1757.89 )
@@ -1117,9 +1063,6 @@ position = Vector2( 60.9111, 2403.93 )
 [node name="Blocks152" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7553.39, -4907.37 )
 
-[node name="Blocks108" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 863.255, 3080.86 )
-
 [node name="Blocks71" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1555.72, 1628.07 )
 
@@ -1134,9 +1077,6 @@ position = Vector2( 3767.23, -2742.04 )
 
 [node name="Blocks38" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1400.49, 2630.7 )
-
-[node name="Blocks105" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 892.583, 3785.84 )
 
 [node name="Blocks225" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4176.63, -2742.28 )
@@ -1159,9 +1099,6 @@ position = Vector2( 56.1416, 2272.26 )
 [node name="Blocks124" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 7552.39, -5040.37 )
 
-[node name="Blocks81" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 858.485, 2947.19 )
-
 [node name="Blocks74" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1556.5, 1496.78 )
 
@@ -1176,9 +1113,6 @@ position = Vector2( 3766.01, -2875.33 )
 
 [node name="Blocks45" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1400.49, 2498.89 )
-
-[node name="Blocks115" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 891.583, 3655.84 )
 
 [node name="Blocks227" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4172.63, -2872.28 )
@@ -1258,9 +1192,6 @@ position = Vector2( 4850.86, -2066.94 )
 [node name="Blocks29" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1398.73, 2760.52 )
 
-[node name="Blocks106" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 895.583, 3915.84 )
-
 [node name="Blocks221" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 4181.96, -2609.46 )
 
@@ -1276,70 +1207,7 @@ position = Vector2( 14390.4, -2434.66 )
 [node name="Blocks103" parent="Blocks" instance=ExtResource( 18 )]
 position = Vector2( 1552.6, 2500.82 )
 
-[node name="Blocks24" parent="Blocks" instance=ExtResource( 18 )]
-position = Vector2( 1383.45, 3548.28 )
-
 [node name="Floor2" type="Node2D" parent="."]
-
-[node name="Floor" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -918.478, 3801.69 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor"]
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor"]
-shape = SubResource( 1 )
-
-[node name="Floor12" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -290.081, 3017.66 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor12"]
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor12"]
-shape = SubResource( 1 )
-
-[node name="Floor36" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 1156.65, 3701.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor36"]
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor36"]
-shape = SubResource( 1 )
-
-[node name="Floor4" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -101.498, 3949.4 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor4"]
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor4"]
-shape = SubResource( 1 )
-
-[node name="Floor7" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 526.922, 3165.38 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor7"]
-texture = ExtResource( 19 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor7"]
-shape = SubResource( 1 )
 
 [node name="Floor37" type="StaticBody2D" parent="Floor2"]
 position = Vector2( -3766.59, 4283.91 )
@@ -1363,18 +1231,6 @@ __meta__ = {
 texture = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor34"]
-shape = SubResource( 1 )
-
-[node name="Floor2" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -790.502, 3801.69 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor2"]
-texture = ExtResource( 20 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor2"]
 shape = SubResource( 1 )
 
 [node name="Floor10" type="StaticBody2D" parent="Floor2"]
@@ -1422,30 +1278,6 @@ texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor186"]
 position = Vector2( -1080.75, -2.73605 )
-shape = SubResource( 1 )
-
-[node name="Floor31" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 1284.65, 3701.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor31"]
-texture = ExtResource( 20 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor31"]
-shape = SubResource( 1 )
-
-[node name="Floor6" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 26.4719, 3949.4 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor6"]
-texture = ExtResource( 20 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor6"]
 shape = SubResource( 1 )
 
 [node name="Floor9" type="StaticBody2D" parent="Floor2"]
@@ -3413,66 +3245,6 @@ scale = Vector2( 47.0907, 1.36485 )
 texture = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor175"]
-shape = SubResource( 1 )
-
-[node name="Floor3" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -662.502, 3801.69 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor3"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor3"]
-shape = SubResource( 1 )
-
-[node name="Floor11" type="StaticBody2D" parent="Floor2"]
-position = Vector2( -34.078, 3017.66 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor11"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor11"]
-shape = SubResource( 1 )
-
-[node name="Floor35" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 1412.65, 3701.78 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor35"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor35"]
-shape = SubResource( 1 )
-
-[node name="Floor5" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 154.472, 3949.4 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor5"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor5"]
-shape = SubResource( 1 )
-
-[node name="Floor8" type="StaticBody2D" parent="Floor2"]
-position = Vector2( 782.922, 3165.38 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2/Floor8"]
-texture = ExtResource( 21 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor8"]
 shape = SubResource( 1 )
 
 [node name="Floor32" type="StaticBody2D" parent="Floor2"]

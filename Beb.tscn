@@ -30,6 +30,11 @@ extents = Vector2( 51.9799, 62.3876 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "build",
+"speed": 5.0
+}, {
 "frames": [ null ],
 "loop": false,
 "name": "0",
@@ -39,11 +44,6 @@ animations = [ {
 "loop": false,
 "name": "build2",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "build",
-"speed": 5.0
 } ]
 
 [node name="Beb" type="KinematicBody2D"]
@@ -52,7 +52,7 @@ script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

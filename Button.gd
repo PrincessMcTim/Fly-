@@ -14,4 +14,5 @@ func _ready():
 
 
 func _on_Button_pressed():
+    global.spawnpoint = 0
     get_tree().change_scene("res://World2.tscn")

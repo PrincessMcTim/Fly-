@@ -12,4 +12,5 @@ func _ready():
 #func _process(delta):
 #    pass
 func _on_Button5_pressed():
+    global.spawnpoint = 0
     get_tree().change_scene("res://World5.tscn")

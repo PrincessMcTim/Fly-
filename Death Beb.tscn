@@ -16,6 +16,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "7",
@@ -46,11 +51,6 @@ animations = [ {
 "name": "8",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "2",
@@ -73,20 +73,24 @@ animations = [ {
 } ]
 
 [node name="Death Beb" type="Node2D"]
+light_mask = 2
 position = Vector2( 169.572, 94.0509 )
 z_index = 7
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+light_mask = 2
 position = Vector2( -65.3607, 71.4005 )
 z_index = 7
 texture = ExtResource( 2 )
 
 [node name="pee1" type="AnimatedSprite" parent="."]
+light_mask = 2
 frames = ExtResource( 3 )
 animation = "0"
 
 [node name="pee2" type="AnimatedSprite" parent="."]
+light_mask = 2
 position = Vector2( 59.0526, -0.0526123 )
 frames = SubResource( 1 )
 animation = "0"

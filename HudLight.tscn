@@ -21,7 +21,6 @@
 [node name="Hud" type="Node2D"]
 
 [node name="Light2D2" type="Light2D" parent="."]
-visible = false
 light_mask = 2
 position = Vector2( -1467.19, -1228.01 )
 scale = Vector2( 2.33008, 0.577374 )
@@ -36,10 +35,9 @@ shadow_filter_smooth = 5.0
 shadow_item_cull_mask = 2
 
 [node name="Light2D3" type="Light2D" parent="."]
-visible = false
 light_mask = 2
-position = Vector2( -1566.68, 960.316 )
-scale = Vector2( 2.33008, 0.939785 )
+position = Vector2( -1678.39, 1006.9 )
+scale = Vector2( 2.49791, 1.00977 )
 texture = ExtResource( 1 )
 texture_scale = 1.3
 energy = 1.1
@@ -51,10 +49,9 @@ shadow_filter_smooth = 5.0
 shadow_item_cull_mask = 2
 
 [node name="Light2D4" type="Light2D" parent="."]
-visible = false
 light_mask = 2
-position = Vector2( 2689.76, 952.534 )
-scale = Vector2( 2.33008, 0.939785 )
+position = Vector2( 2850.93, 956.507 )
+scale = Vector2( 2.57222, 0.945753 )
 texture = ExtResource( 1 )
 texture_scale = 1.3
 energy = 1.1
@@ -67,10 +64,10 @@ shadow_item_cull_mask = 2
 
 [node name="Button" type="TextureButton" parent="."]
 light_mask = 2
-margin_left = -1999.18
-margin_top = -1500.85
-margin_right = -1871.18
-margin_bottom = -1372.85
+margin_left = -1995.18
+margin_top = -1504.85
+margin_right = -1867.18
+margin_bottom = -1376.85
 texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -79,10 +76,10 @@ __meta__ = {
 
 [node name="Button2" type="TextureButton" parent="."]
 light_mask = 3
-margin_left = -2133.65
-margin_top = -1501.64
-margin_right = -2005.65
-margin_bottom = -1373.64
+margin_left = -2129.65
+margin_top = -1505.64
+margin_right = -2001.65
+margin_bottom = -1377.64
 texture_normal = ExtResource( 12 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -91,10 +88,10 @@ __meta__ = {
 
 [node name="Button3" type="TextureButton" parent="."]
 light_mask = 3
-margin_left = -1864.18
-margin_top = -1501.8
-margin_right = -1736.18
-margin_bottom = -1373.8
+margin_left = -1860.18
+margin_top = -1505.8
+margin_right = -1732.18
+margin_bottom = -1377.8
 texture_normal = ExtResource( 4 )
 script = ExtResource( 5 )
 __meta__ = {
@@ -103,10 +100,10 @@ __meta__ = {
 
 [node name="Button4" type="TextureButton" parent="."]
 light_mask = 3
-margin_left = -1729.91
-margin_top = -1501.49
-margin_right = -1601.91
-margin_bottom = -1373.49
+margin_left = -1725.91
+margin_top = -1505.49
+margin_right = -1597.91
+margin_bottom = -1377.49
 texture_normal = ExtResource( 6 )
 script = ExtResource( 7 )
 __meta__ = {
@@ -115,10 +112,10 @@ __meta__ = {
 
 [node name="Button6" type="TextureButton" parent="."]
 light_mask = 3
-margin_left = -1461.5
-margin_top = -1499.59
-margin_right = -1333.5
-margin_bottom = -1371.59
+margin_left = -1457.5
+margin_top = -1503.59
+margin_right = -1329.5
+margin_bottom = -1375.59
 texture_normal = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -127,10 +124,10 @@ __meta__ = {
 
 [node name="Button5" type="TextureButton" parent="."]
 light_mask = 3
-margin_left = -1595.86
-margin_top = -1500.47
-margin_right = -1467.86
-margin_bottom = -1372.47
+margin_left = -1591.86
+margin_top = -1504.47
+margin_right = -1463.86
+margin_bottom = -1376.47
 texture_normal = ExtResource( 10 )
 script = ExtResource( 11 )
 __meta__ = {
