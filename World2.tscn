@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Texture/Background/colored_grass.png" type="Texture" id=1]
 [ext_resource path="res://Blocks.tscn" type="PackedScene" id=2]
@@ -11,8 +11,9 @@
 [ext_resource path="res://Fly.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Bob.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Beb.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Hud.tscn" type="PackedScene" id=12]
-[ext_resource path="res://death.tscn" type="PackedScene" id=16]
+[ext_resource path="res://death.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Texture/Hud/hud2.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64.231, 64.1212 )
@@ -1939,9 +1940,14 @@ position = Vector2( 6859.96, 2442.04 )
 [node name="Beb" parent="." instance=ExtResource( 11 )]
 position = Vector2( 5440.78, 2431.87 )
 
-[node name="death" parent="." instance=ExtResource( 16 )]
+[node name="death" parent="." instance=ExtResource( 12 )]
 position = Vector2( 5437, 3213 )
 
-[node name="Hud" parent="." instance=ExtResource( 12 )]
+[node name="Hud" parent="." instance=ExtResource( 13 )]
 position = Vector2( 5585, 2723 )
 z_index = 10
+
+[node name="hud2" type="Sprite" parent="Hud"]
+position = Vector2( -1934.62, -1438.87 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 14 )

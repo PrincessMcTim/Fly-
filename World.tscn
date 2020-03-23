@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Texture/Background/colored_grass.png" type="Texture" id=1]
 [ext_resource path="res://Blocks.tscn" type="PackedScene" id=2]
@@ -12,9 +12,10 @@
 [ext_resource path="res://Bob.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Beb.tscn" type="PackedScene" id=11]
 [ext_resource path="res://death.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Hud.tscn" type="PackedScene" id=13]
-[ext_resource path="res://pup5.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Clouds2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://pup5.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Clouds2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Texture/Hud/hud1.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64.231, 64.1212 )
@@ -2130,19 +2131,24 @@ position = Vector2( 5704.87, 1926.76 )
 [node name="death" parent="." instance=ExtResource( 12 )]
 position = Vector2( 5253, 3109 )
 
-[node name="pup" parent="." instance=ExtResource( 15 )]
+[node name="pup" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6379, 1394 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup2" parent="." instance=ExtResource( 15 )]
+[node name="pup2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6360, 2575 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="Clouds" parent="." instance=ExtResource( 16 )]
+[node name="Clouds" parent="." instance=ExtResource( 14 )]
 position = Vector2( -4499, 3075 )
 
-[node name="Hud" parent="." instance=ExtResource( 13 )]
+[node name="Hud" parent="." instance=ExtResource( 15 )]
 position = Vector2( 5585, 2723 )
 z_index = 10
+
+[node name="hud1" type="Sprite" parent="Hud"]
+position = Vector2( -2069.98, -1437.64 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 16 )

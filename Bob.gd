@@ -25,7 +25,7 @@ func _physics_process(delta):
     if global.spawnpoint == 2:
         if sign($PositionBuild.position.x) == 1:
                 $PositionBuild.position.x *= -1
-    
+        $PositionBuild/Spawn.flip_h = true
     
 func _move(delta):
     direction.x = int(Input.is_action_pressed("ui_right"))-int(Input.is_action_pressed("ui_left"))

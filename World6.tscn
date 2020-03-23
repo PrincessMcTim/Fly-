@@ -8,30 +8,30 @@
 [ext_resource path="res://Button3.gd" type="Script" id=6]
 [ext_resource path="res://Texture/Hud/hud4.png" type="Texture" id=7]
 [ext_resource path="res://Button4.gd" type="Script" id=8]
-[ext_resource path="res://Texture/Hud/hud1.png" type="Texture" id=9]
-[ext_resource path="res://Button2.gd" type="Script" id=10]
-[ext_resource path="res://Pee Beb.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Pee Bob.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Texture/Background/colored_grass.png" type="Texture" id=13]
-[ext_resource path="res://GhostR.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Ghost.tscn" type="PackedScene" id=15]
-[ext_resource path="res://GhostL.tscn" type="PackedScene" id=16]
-[ext_resource path="res://pup5.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Blocks.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Texture/Ground/sandCliff_left.png" type="Texture" id=19]
-[ext_resource path="res://Texture/Ground/sandMid.png" type="Texture" id=20]
-[ext_resource path="res://Texture/Ground/sandCliff_right.png" type="Texture" id=21]
-[ext_resource path="res://Clouds.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Fly.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Bob.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Beb.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Spawn1.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Spawn2.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Button5.gd" type="Script" id=28]
-[ext_resource path="res://Texture/Hud/hud5.png" type="Texture" id=29]
-[ext_resource path="res://Hud.tscn" type="PackedScene" id=30]
-[ext_resource path="res://Death Beb.tscn" type="PackedScene" id=31]
-[ext_resource path="res://Death Bob.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Texture/Hud/hud5.png" type="Texture" id=9]
+[ext_resource path="res://Button5.gd" type="Script" id=10]
+[ext_resource path="res://Texture/Hud/hud6.png" type="Texture" id=11]
+[ext_resource path="res://Texture/Hud/hud1.png" type="Texture" id=12]
+[ext_resource path="res://Button2.gd" type="Script" id=13]
+[ext_resource path="res://Pee Beb.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Pee Bob.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Death Beb.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Death Bob.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Texture/Background/colored_grass.png" type="Texture" id=18]
+[ext_resource path="res://GhostR.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Ghost.tscn" type="PackedScene" id=20]
+[ext_resource path="res://GhostL.tscn" type="PackedScene" id=21]
+[ext_resource path="res://pup5.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Blocks.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Texture/Ground/sandCliff_left.png" type="Texture" id=24]
+[ext_resource path="res://Texture/Ground/sandMid.png" type="Texture" id=25]
+[ext_resource path="res://Texture/Ground/sandCliff_right.png" type="Texture" id=26]
+[ext_resource path="res://Clouds.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Fly.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Bob.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Beb.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Spawn1.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Spawn2.tscn" type="PackedScene" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64.231, 61.4199 )
@@ -48,9 +48,12 @@ __meta__ = {
 }
 
 [node name="Camera2D2" type="Camera2D" parent="Camera"]
+editor/display_folded = true
 position = Vector2( 6218.43, 2883.22 )
 current = true
 zoom = Vector2( 3.5, 3.5 )
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 script = ExtResource( 1 )
 
 [node name="Light2D2" type="Light2D" parent="Camera/Camera2D2"]
@@ -107,11 +110,28 @@ margin_left = -2615.43
 margin_top = -1725.22
 margin_right = -2487.43
 margin_bottom = -1597.22
-texture_normal = ExtResource( 29 )
-script = ExtResource( 28 )
+texture_normal = ExtResource( 9 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button6" type="TextureButton" parent="Camera/Camera2D2"]
+light_mask = 3
+margin_left = -2484.43
+margin_top = -1725.22
+margin_right = -2356.43
+margin_bottom = -1597.22
+texture_normal = ExtResource( 11 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hud6" type="Sprite" parent="Camera/Camera2D2/Button6"]
+position = Vector2( 63.3413, 62.6284 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 11 )
 
 [node name="Button2" type="TextureButton" parent="Camera/Camera2D2"]
 light_mask = 3
@@ -119,1095 +139,1090 @@ margin_left = -3156.43
 margin_top = -1729.22
 margin_right = -3028.43
 margin_bottom = -1601.22
-texture_normal = ExtResource( 9 )
-script = ExtResource( 10 )
+texture_normal = ExtResource( 12 )
+script = ExtResource( 13 )
 
-[node name="Pee Beb" parent="Camera/Camera2D2" instance=ExtResource( 11 )]
+[node name="Pee Beb" parent="Camera/Camera2D2" instance=ExtResource( 14 )]
 position = Vector2( 2709.57, 1523.78 )
 
-[node name="Pee Bob" parent="Camera/Camera2D2" instance=ExtResource( 12 )]
+[node name="Pee Bob" parent="Camera/Camera2D2" instance=ExtResource( 15 )]
 position = Vector2( 3004.57, 1523.78 )
 
-[node name="Hud" parent="Camera/Camera2D2" instance=ExtResource( 30 )]
-visible = false
-position = Vector2( -1097.24, 190.174 )
-
-[node name="Death Beb" parent="Camera/Camera2D2" instance=ExtResource( 31 )]
+[node name="Death Beb" parent="Camera/Camera2D2" instance=ExtResource( 16 )]
 position = Vector2( -3004.51, 1522.36 )
 
-[node name="Death Bob" parent="Camera/Camera2D2" instance=ExtResource( 32 )]
+[node name="Death Bob" parent="Camera/Camera2D2" instance=ExtResource( 17 )]
 position = Vector2( -2741.66, 1524.47 )
 
 [node name="Background" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="colored_grass" type="Sprite" parent="Background"]
 position = Vector2( 4307.97, 3223.49 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass12" type="Sprite" parent="Background"]
 position = Vector2( 10449, 3232.49 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass6" type="Sprite" parent="Background"]
 position = Vector2( 4354.33, 2713.62 )
 scale = Vector2( 2, 3.11158 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass13" type="Sprite" parent="Background"]
 position = Vector2( 10363.3, 2742.62 )
 scale = Vector2( 2, 3.11158 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass7" type="Sprite" parent="Background"]
 position = Vector2( 6317, 4200 )
 scale = Vector2( 5.92773, 11.9707 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass14" type="Sprite" parent="Background"]
 position = Vector2( 12326, 4229 )
 scale = Vector2( 5.92773, 11.9707 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass8" type="Sprite" parent="Background"]
 position = Vector2( 6265, 1978 )
 scale = Vector2( 5.92773, 11.9707 )
 z_index = -3
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass17" type="Sprite" parent="Background"]
 position = Vector2( 4954.92, 1910.82 )
 scale = Vector2( 5.92773, 11.9707 )
 z_index = -3
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass15" type="Sprite" parent="Background"]
 position = Vector2( 10973.6, 1880.65 )
 scale = Vector2( 8.49029, 12.1343 )
 z_index = -3
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass2" type="Sprite" parent="Background"]
 position = Vector2( 6355.77, 3226.36 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass16" type="Sprite" parent="Background"]
 position = Vector2( 12496, 3236 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass4" type="Sprite" parent="Background"]
 position = Vector2( 6380.32, 2754.36 )
 scale = Vector2( 2, 3.16455 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass10" type="Sprite" parent="Background"]
 position = Vector2( 12389.3, 2783.36 )
 scale = Vector2( 2, 3.16455 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass3" type="Sprite" parent="Background"]
 position = Vector2( 8403.66, 3229.59 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass11" type="Sprite" parent="Background"]
 position = Vector2( 14542.7, 3238.59 )
 scale = Vector2( 2, 2 )
 z_index = -1
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass5" type="Sprite" parent="Background"]
 position = Vector2( 8350.28, 2793.51 )
 scale = Vector2( 2, 3.31642 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="colored_grass9" type="Sprite" parent="Background"]
 position = Vector2( 14359.3, 2822.51 )
 scale = Vector2( 2, 3.31642 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 
 [node name="GhostFloor" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="Ghost15" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost15" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 101.401, 2664.7 )
 
-[node name="Ghost54" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost54" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 7599.39, -4645.93 )
 
-[node name="Ghost16" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost16" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( -26.5986, 2664.7 )
 
-[node name="Ghost52" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost52" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 7471.39, -4645.93 )
 
-[node name="Ghost17" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost17" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( -154.599, 2664.7 )
 
-[node name="Ghost50" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost50" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 7343.39, -4645.93 )
 
-[node name="Ghost18" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost18" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( -351, 1761.8 )
 
-[node name="Ghost48" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost48" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 7215.39, -4645.93 )
 
-[node name="Ghost19" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost19" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 8726.53, -4845.04 )
 
-[node name="Ghost49" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost49" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 7959.5, -5352.53 )
 
-[node name="Ghost78" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost78" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 4803.72, -4635.78 )
 
-[node name="Ghost59" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost59" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 5049.88, -2934.84 )
 
-[node name="Ghost60" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost60" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 783, -4263.82 )
 
-[node name="Ghost20" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost20" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 8598.53, -4845.04 )
 
-[node name="Ghost45" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost45" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 7831.5, -5352.53 )
 
-[node name="Ghost72" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost72" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 4675.72, -4635.78 )
 
-[node name="Ghost58" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost58" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 4921.88, -2934.84 )
 
-[node name="Ghost62" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost62" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 655, -4263.82 )
 
-[node name="Ghost90" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost90" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 3835.65, -2480.66 )
 
-[node name="Ghost21" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost21" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 8470.53, -4845.04 )
 
-[node name="Ghost41" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost41" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 7703.5, -5352.53 )
 
-[node name="Ghost83" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost83" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 4547.72, -4635.78 )
 
-[node name="Ghost57" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost57" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 4793.88, -2935.22 )
 
-[node name="Ghost76" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost76" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 527, -4263.82 )
 
-[node name="Ghost5" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost5" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 789.401, 2327.92 )
 
-[node name="Ghost46" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost46" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( -671, -138.98 )
 
-[node name="Ghost64" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost64" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 14382.6, -2304.07 )
 
-[node name="Ghost26" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost26" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 1545.75, 2631.41 )
 
-[node name="Ghost" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 1450.4, 2889.51 )
 
-[node name="Ghost38" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost38" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 950.583, 4044.66 )
 
-[node name="Ghost68" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost68" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 4219.63, -2480.67 )
 
-[node name="Ghost2" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost2" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1322.4, 2889.51 )
 
-[node name="Ghost28" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost28" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 822.583, 4044.66 )
 
-[node name="Ghost82" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost82" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 4091.63, -2480.67 )
 
-[node name="Ghost3" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost3" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1194.4, 2889.51 )
 
-[node name="Ghost36" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost36" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 694.583, 4044.66 )
 
-[node name="Ghost77" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost77" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 3963.63, -2480.67 )
 
-[node name="Ghost4" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost4" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 1066.4, 2889.51 )
 
-[node name="Ghost27" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost27" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 566.583, 4044.66 )
 
-[node name="Ghost75" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost75" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 560, -3290 )
 
-[node name="Ghost6" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost6" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 661.401, 2327.92 )
 
-[node name="Ghost56" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost56" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( -799, -138.98 )
 
-[node name="Ghost84" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost84" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 14254.6, -2304.07 )
 
-[node name="Ghost39" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost39" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1417.75, 2631.41 )
 
-[node name="Ghost7" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost7" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 533.401, 2327.92 )
 
-[node name="Ghost53" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost53" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( -927, -138.98 )
 
-[node name="Ghost73" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost73" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 14126.6, -2304.07 )
 
-[node name="Ghost34" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost34" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 1289.75, 2631.41 )
 
-[node name="Ghost8" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost8" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 1602.2, 1890.44 )
 
-[node name="Ghost55" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost55" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 8801.84, -5426.37 )
 
-[node name="Ghost37" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost37" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 921.745, 1967.85 )
 
-[node name="Ghost65" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost65" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 1577, -3352 )
 
-[node name="Ghost9" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost9" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1474.2, 1890.44 )
 
-[node name="Ghost42" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost42" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 8673.84, -5426.37 )
 
-[node name="Ghost23" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost23" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 793.745, 1967.85 )
 
-[node name="Ghost74" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost74" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 3707.66, -2480.67 )
 
-[node name="Ghost10" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost10" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1346.2, 1890.44 )
 
-[node name="Ghost51" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost51" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 8545.84, -5426.37 )
 
-[node name="Ghost32" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost32" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 665.745, 1967.85 )
 
-[node name="Ghost63" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost63" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 3579.66, -2480.67 )
 
-[node name="Ghost11" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost11" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 1218.2, 1890.44 )
 
-[node name="Ghost40" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost40" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 8417.84, -5426.37 )
 
-[node name="Ghost22" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost22" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 537.745, 1967.85 )
 
-[node name="Ghost70" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost70" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 3451.66, -2480.67 )
 
-[node name="Ghost12" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost12" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 1224.29, 1360.45 )
 
-[node name="Ghost43" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost43" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 15200.7, -2185.18 )
 
-[node name="Ghost69" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost69" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 8150.25, -4780.49 )
 
-[node name="Ghost24" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost24" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 58.7451, 2606.78 )
 
-[node name="Ghost61" parent="GhostFloor" instance=ExtResource( 14 )]
+[node name="Ghost61" parent="GhostFloor" instance=ExtResource( 19 )]
 position = Vector2( 4845.86, -1937.35 )
 
-[node name="Ghost13" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost13" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 1096.29, 1360.45 )
 
-[node name="Ghost47" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost47" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 15072.7, -2185.18 )
 
-[node name="Ghost87" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost87" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 8022.25, -4780.49 )
 
-[node name="Ghost29" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost29" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( -69.2549, 2606.78 )
 
-[node name="Ghost67" parent="GhostFloor" instance=ExtResource( 15 )]
+[node name="Ghost67" parent="GhostFloor" instance=ExtResource( 20 )]
 position = Vector2( 4717.86, -1937.35 )
 
-[node name="Ghost14" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost14" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 968.295, 1360.86 )
 
-[node name="Ghost44" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost44" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 14944.7, -2185.18 )
 
-[node name="Ghost86" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost86" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 7894.25, -4780.49 )
 
-[node name="Ghost25" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost25" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( -197.255, 2606.78 )
 
-[node name="Ghost81" parent="GhostFloor" instance=ExtResource( 16 )]
+[node name="Ghost81" parent="GhostFloor" instance=ExtResource( 21 )]
 position = Vector2( 4589.86, -1937.35 )
 
 [node name="Powerups" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="pup" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( -72.5987, 2069.7 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup16" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup16" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 11175.8, -874.245 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup2" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup2" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 4091.57, -3670.67 )
 scale = Vector2( 0.7, 0.7 )
-frame = 2
+frame = 4
 
-[node name="pup12" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup12" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 8667.7, -3450.94 )
 scale = Vector2( 0.7, 0.7 )
-frame = 2
+frame = 4
 
-[node name="pup3" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup3" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 3432.09, -3652.39 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup14" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup14" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 7022.7, -3191.31 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup4" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup4" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 3855.66, -3632.88 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup10" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup10" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 9698.88, -1240.99 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup17" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup17" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 12360.5, -3432.07 )
 scale = Vector2( 0.7, 0.7 )
+frame = 2
 
-[node name="pup18" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup18" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 14060, -1994.02 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 1
 
-[node name="pup19" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup19" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 13275.6, -626.36 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 1
 
-[node name="pup20" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup20" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 12526.8, 986.481 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup21" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup21" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 13606.8, 1231.29 )
 scale = Vector2( 0.7, 0.7 )
-frame = 2
+frame = 4
 
-[node name="pup22" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup22" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 10291.8, 1059.32 )
 scale = Vector2( 0.7, 0.7 )
-frame = 2
+frame = 4
 
-[node name="pup23" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup23" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 8275.97, 2368.15 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup24" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup24" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 6206.12, 1652.27 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup5" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup5" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 1971.72, -2324.97 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup11" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup11" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 6547.84, -2105.24 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup6" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup6" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 3658.71, -3682 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup15" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup15" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 9733.22, -3753.9 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
 
-[node name="pup7" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup7" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 4666.07, -2542.66 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup9" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup9" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 8065.61, -1156.39 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup8" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup8" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 4860.59, -3599.14 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
-[node name="pup13" parent="Powerups" instance=ExtResource( 17 )]
+[node name="pup13" parent="Powerups" instance=ExtResource( 22 )]
 position = Vector2( 10945.2, -2383.83 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
+frame = 3
 
 [node name="Blocks" type="Node2D" parent="."]
+editor/display_folded = true
 
-[node name="Blocks7" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks7" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -228.049, 2535.34 )
 
-[node name="Blocks14" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks14" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7269.94, -4776.29 )
 
-[node name="Blocks54" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks54" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1272.15, 1759.01 )
 
-[node name="Blocks142" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks142" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8472.79, -5556.8 )
 
-[node name="Blocks98" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks98" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 597.745, 1837.19 )
 
-[node name="Blocks236" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks236" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3483.66, -2612.1 )
 
-[node name="Blocks31" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks31" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8471.53, -5107.42 )
 
-[node name="Blocks150" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks150" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7706.37, -5611.97 )
 
-[node name="Blocks181" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks181" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4549.59, -4895.22 )
 
-[node name="Blocks161" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks161" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4797.75, -3194.28 )
 
-[node name="Blocks203" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks203" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 529.87, -4524.26 )
 
-[node name="Blocks55" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks55" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 964.355, 1101.09 )
 
-[node name="Blocks122" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks122" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14942.8, -2445.54 )
 
-[node name="Blocks199" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks199" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7896.31, -5039.85 )
 
-[node name="Blocks79" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks79" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -199.255, 2347.19 )
 
-[node name="Blocks209" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks209" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4592.92, -2195.71 )
 
-[node name="Blocks35" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks35" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -222.359, 2404.54 )
 
-[node name="Blocks141" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks141" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7270.39, -4906.37 )
 
-[node name="Blocks51" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks51" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1278.2, 1629.31 )
 
-[node name="Blocks121" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks121" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8474.84, -5687.03 )
 
-[node name="Blocks78" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks78" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 599.745, 1707.19 )
 
-[node name="Blocks230" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks230" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3489.5, -2742.7 )
 
-[node name="Blocks39" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks39" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1119.73, 2629.85 )
 
-[node name="Blocks240" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks240" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3903.63, -2740.28 )
 
-[node name="Blocks56" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks56" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 525.401, 2068.74 )
 
-[node name="Blocks136" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks136" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -929, -400.16 )
 
-[node name="Blocks176" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks176" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14126.6, -2565.25 )
 
-[node name="Blocks91" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks91" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1285.75, 2371.19 )
 
-[node name="Blocks40" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks40" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -217.639, 2273.67 )
 
-[node name="Blocks154" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks154" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7271.39, -5036.37 )
 
-[node name="Blocks50" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks50" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1282.08, 1498.22 )
 
-[node name="Blocks120" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks120" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8476.72, -5816.59 )
 
-[node name="Blocks77" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks77" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 602.745, 1578.19 )
 
-[node name="Blocks196" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks196" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3493.59, -2872.89 )
 
-[node name="Blocks43" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks43" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1119.73, 2500.03 )
 
-[node name="Blocks239" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks239" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3903.63, -2871.28 )
 
-[node name="Blocks52" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks52" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 525.401, 1938.92 )
 
-[node name="Blocks133" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks133" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -927, -530.98 )
 
-[node name="Blocks210" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks210" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14126.6, -2695.29 )
 
-[node name="Blocks90" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks90" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1284.75, 2241.41 )
 
-[node name="Blocks46" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks46" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8473.45, -5238.48 )
 
-[node name="Blocks128" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks128" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7707.5, -5740.91 )
 
-[node name="Blocks245" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks245" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4549.64, -5025.22 )
 
-[node name="Blocks163" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks163" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4798.8, -3324.28 )
 
-[node name="Blocks214" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks214" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 528.92, -4655.26 )
 
-[node name="Blocks53" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks53" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 969.945, 970.233 )
 
-[node name="Blocks145" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks145" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14945.7, -2575.77 )
 
-[node name="Blocks234" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks234" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7897.25, -5168.71 )
 
-[node name="Blocks100" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks100" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -199.255, 2217.19 )
 
-[node name="Blocks175" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks175" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4594.86, -2323.94 )
 
-[node name="Blocks25" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks25" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8473.1, -4975.93 )
 
-[node name="Blocks127" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks127" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7707.07, -5482.42 )
 
-[node name="Blocks201" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks201" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4550.29, -4765.67 )
 
-[node name="Blocks165" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks165" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4796.45, -3064.73 )
 
-[node name="Blocks218" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks218" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 529.57, -4393.71 )
 
-[node name="Blocks57" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks57" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 961.685, 1230.04 )
 
-[node name="Blocks139" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks139" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14940.1, -2315.59 )
 
-[node name="Blocks226" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks226" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7894.25, -4909.71 )
 
-[node name="Blocks94" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks94" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -201.865, 2476.37 )
 
-[node name="Blocks170" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks170" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4589.86, -2066.94 )
 
-[node name="Blocks30" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks30" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1119.73, 2759.67 )
 
-[node name="Blocks233" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks233" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3906.63, -2611.28 )
 
-[node name="Blocks49" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks49" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 525.401, 2198.56 )
 
-[node name="Blocks126" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks126" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -929, -270.34 )
 
-[node name="Blocks228" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks228" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14125.6, -2435.43 )
 
-[node name="Blocks83" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks83" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1285.75, 2501.19 )
 
-[node name="Blocks23" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks23" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1242.45, 3368.75 )
 
-[node name="Blocks6" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks6" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1425.66, 3168.04 )
 
-[node name="Blocks21" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks21" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1390.65, 3382.26 )
 
-[node name="Blocks5" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks5" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -84.3386, 2535.3 )
 
-[node name="Blocks12" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks12" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7415.65, -4775.33 )
 
-[node name="Blocks61" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks61" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1418.01, 1758.7 )
 
-[node name="Blocks131" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks131" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8609.65, -5556.11 )
 
-[node name="Blocks88" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks88" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 737.555, 1836.11 )
 
-[node name="Blocks244" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks244" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3629.52, -2612.41 )
 
-[node name="Blocks32" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks32" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8604.7, -5107.54 )
 
-[node name="Blocks158" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks158" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7837.67, -5612.03 )
 
-[node name="Blocks211" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks211" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4680.89, -4895.28 )
 
-[node name="Blocks168" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks168" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4927.05, -3194.34 )
 
-[node name="Blocks189" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks189" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 660.17, -4524.32 )
 
-[node name="Blocks62" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks62" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1099.53, 1100.13 )
 
-[node name="Blocks119" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks119" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15072.7, -2444.77 )
 
-[node name="Blocks182" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks182" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8027.49, -5039.81 )
 
-[node name="Blocks76" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks76" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -68.2549, 2345.19 )
 
-[node name="Blocks192" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks192" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4721.86, -2196.94 )
 
-[node name="Blocks36" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks36" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -80.4586, 2405.54 )
 
-[node name="Blocks132" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks132" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7412.39, -4905.37 )
 
-[node name="Blocks58" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks58" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1419.42, 1627.89 )
 
-[node name="Blocks138" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks138" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8612.06, -5686.92 )
 
-[node name="Blocks93" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks93" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 733.745, 1706.19 )
 
-[node name="Blocks219" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks219" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3628.93, -2742.22 )
 
-[node name="Blocks37" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks37" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1263.73, 2627.51 )
 
-[node name="Blocks179" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks179" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4037.63, -2740.28 )
 
-[node name="Blocks66" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks66" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 659.091, 2066.79 )
 
-[node name="Blocks147" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks147" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -797.31, -401.11 )
 
-[node name="Blocks193" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks193" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14257.6, -2565.29 )
 
-[node name="Blocks102" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks102" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1417.44, 2369.28 )
 
-[node name="Blocks41" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks41" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -81.5986, 2274.7 )
 
-[node name="Blocks146" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks146" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7410.39, -5036.37 )
 
-[node name="Blocks64" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks64" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1420.2, 1495.6 )
 
-[node name="Blocks149" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks149" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8610.84, -5817.03 )
 
-[node name="Blocks104" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks104" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 733.745, 1577.19 )
 
-[node name="Blocks231" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks231" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3628.71, -2872.51 )
 
-[node name="Blocks44" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks44" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1263.73, 2494.7 )
 
-[node name="Blocks205" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks205" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4036.63, -2870.28 )
 
-[node name="Blocks59" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks59" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 659.091, 1935.98 )
 
-[node name="Blocks130" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks130" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -796, -532.2 )
 
-[node name="Blocks191" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks191" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14257.3, -2695.01 )
 
-[node name="Blocks85" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks85" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1415.75, 2239.19 )
 
-[node name="Blocks47" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks47" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8602.58, -5238.42 )
 
-[node name="Blocks134" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks134" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7837.5, -5741.91 )
 
-[node name="Blocks206" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks206" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4679.77, -5026.16 )
 
-[node name="Blocks160" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks160" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4927.88, -3324.22 )
 
-[node name="Blocks188" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks188" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 659.05, -4656.2 )
 
-[node name="Blocks63" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks63" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1103.21, 969.383 )
 
-[node name="Blocks137" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks137" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15075.7, -2574.77 )
 
-[node name="Blocks238" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks238" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8027.25, -5168.71 )
 
-[node name="Blocks92" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks92" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -69.2549, 2215.19 )
 
-[node name="Blocks177" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks177" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4723.86, -2326.94 )
 
-[node name="Blocks26" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks26" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8604.01, -4976.95 )
 
-[node name="Blocks135" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks135" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7836.98, -5482.44 )
 
-[node name="Blocks178" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks178" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4681.2, -4765.69 )
 
-[node name="Blocks167" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks167" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4926.36, -3063.75 )
 
-[node name="Blocks216" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks216" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 660.48, -4393.73 )
 
-[node name="Blocks65" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks65" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1098.29, 1230.86 )
 
-[node name="Blocks159" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks159" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15071.3, -2314.59 )
 
-[node name="Blocks235" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks235" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8023.77, -4909.9 )
 
-[node name="Blocks117" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks117" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -67.2549, 2476.19 )
 
-[node name="Blocks173" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks173" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4721.38, -2066.76 )
 
-[node name="Blocks28" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks28" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1263.73, 2759.33 )
 
-[node name="Blocks184" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks184" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4043.63, -2610.28 )
 
-[node name="Blocks60" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks60" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 660.091, 2197.61 )
 
-[node name="Blocks140" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks140" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -798.31, -270.29 )
 
-[node name="Blocks169" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks169" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14258.6, -2435.29 )
 
-[node name="Blocks95" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks95" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1416.75, 2500.19 )
 
-[node name="Blocks8" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks8" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 59.9312, 2534.54 )
 
-[node name="Blocks13" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks13" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7559.39, -4775.37 )
 
-[node name="Blocks73" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks73" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1559.87, 1757.89 )
 
-[node name="Blocks151" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks151" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8747.51, -5556.92 )
 
-[node name="Blocks107" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks107" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 876.745, 1837.19 )
 
-[node name="Blocks241" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks241" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3770.38, -2612.22 )
 
-[node name="Blocks33" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks33" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8739.29, -5104.15 )
 
-[node name="Blocks143" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks143" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7968.5, -5610.91 )
 
-[node name="Blocks224" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks224" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4814.48, -4894.89 )
 
-[node name="Blocks166" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks166" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 5059.88, -3193.22 )
 
-[node name="Blocks187" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks187" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 789.76, -4523.93 )
 
-[node name="Blocks67" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks67" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1233.21, 1097.63 )
 
-[node name="Blocks125" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks125" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15203.7, -2444.77 )
 
-[node name="Blocks180" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks180" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8157.25, -5039.71 )
 
-[node name="Blocks82" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks82" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 65.7451, 2348.19 )
 
-[node name="Blocks194" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks194" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4850.86, -2195.94 )
 
-[node name="Blocks34" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks34" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 60.9111, 2403.93 )
 
-[node name="Blocks152" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks152" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7553.39, -4907.37 )
 
-[node name="Blocks71" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks71" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1555.72, 1628.07 )
 
-[node name="Blocks156" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks156" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8744.84, -5687.03 )
 
-[node name="Blocks112" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks112" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 869.745, 1707.19 )
 
-[node name="Blocks174" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks174" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3767.23, -2742.04 )
 
-[node name="Blocks38" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks38" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1400.49, 2630.7 )
 
-[node name="Blocks225" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks225" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4176.63, -2742.28 )
 
-[node name="Blocks70" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks70" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 796.251, 2068.51 )
 
-[node name="Blocks129" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks129" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -666, -400.2 )
 
-[node name="Blocks208" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks208" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14389.6, -2564.29 )
 
-[node name="Blocks84" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks84" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1552.6, 2370 )
 
-[node name="Blocks42" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks42" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 56.1416, 2272.26 )
 
-[node name="Blocks124" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks124" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7552.39, -5040.37 )
 
-[node name="Blocks74" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks74" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1556.5, 1496.78 )
 
-[node name="Blocks157" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks157" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8743.84, -5817.03 )
 
-[node name="Blocks114" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks114" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 867.745, 1576.19 )
 
-[node name="Blocks183" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks183" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 3766.01, -2875.33 )
 
-[node name="Blocks45" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks45" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1400.49, 2498.89 )
 
-[node name="Blocks227" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks227" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4172.63, -2872.28 )
 
-[node name="Blocks68" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks68" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 796.251, 1935.7 )
 
-[node name="Blocks155" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks155" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -666, -531.2 )
 
-[node name="Blocks232" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks232" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14388.6, -2694.29 )
 
-[node name="Blocks111" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks111" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1552.75, 2240.19 )
 
-[node name="Blocks48" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks48" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8737.5, -5236.58 )
 
-[node name="Blocks118" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks118" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7969.5, -5740.91 )
 
-[node name="Blocks246" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks246" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4812.69, -5025.32 )
 
-[node name="Blocks162" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks162" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 5059.88, -3322.22 )
 
-[node name="Blocks243" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks243" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 788.97, -4652.36 )
 
-[node name="Blocks69" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks69" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1236.03, 966.863 )
 
-[node name="Blocks153" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks153" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15205.7, -2574.77 )
 
-[node name="Blocks248" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks248" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8158.25, -5168.71 )
 
-[node name="Blocks109" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks109" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 63.7451, 2219.19 )
 
-[node name="Blocks185" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks185" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4852.86, -2325.94 )
 
-[node name="Blocks27" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks27" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8734.53, -4975.04 )
 
-[node name="Blocks123" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks123" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 7967.5, -5481.53 )
 
-[node name="Blocks190" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks190" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4811.72, -4765.16 )
 
-[node name="Blocks164" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks164" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 5057.88, -3063.84 )
 
-[node name="Blocks237" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks237" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 791, -4392.82 )
 
-[node name="Blocks72" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks72" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1231.53, 1229.42 )
 
-[node name="Blocks144" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks144" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 15202.7, -2314.77 )
 
-[node name="Blocks195" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks195" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 8154.25, -4909.71 )
 
-[node name="Blocks99" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks99" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 66.9851, 2476.75 )
 
-[node name="Blocks215" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks215" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4850.86, -2066.94 )
 
-[node name="Blocks29" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks29" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1398.73, 2760.52 )
 
-[node name="Blocks221" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks221" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 4181.96, -2609.46 )
 
-[node name="Blocks75" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks75" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 796.251, 2199.33 )
 
-[node name="Blocks148" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks148" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( -667, -269.2 )
 
-[node name="Blocks197" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks197" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 14390.4, -2434.66 )
 
-[node name="Blocks103" parent="Blocks" instance=ExtResource( 18 )]
+[node name="Blocks103" parent="Blocks" instance=ExtResource( 23 )]
 position = Vector2( 1552.6, 2500.82 )
 
 [node name="Floor2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Floor37" type="StaticBody2D" parent="Floor2"]
 position = Vector2( -3766.59, 4283.91 )
@@ -1216,7 +1231,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor37"]
-texture = ExtResource( 19 )
+texture = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor37"]
 shape = SubResource( 1 )
@@ -1228,7 +1243,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor34"]
-texture = ExtResource( 19 )
+texture = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor34"]
 shape = SubResource( 1 )
@@ -1240,7 +1255,7 @@ scale = Vector2( 1, 25 )
 [node name="Sprite" type="Sprite" parent="Floor2/Floor10"]
 position = Vector2( 6230.07, -49.112 )
 scale = Vector2( 1.32086, 1.88056 )
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor10"]
 position = Vector2( 6210.07, 8.008 )
@@ -1269,12 +1284,12 @@ scale = Vector2( 1, 25 )
 [node name="Sprite" type="Sprite" parent="Floor2/Floor186"]
 position = Vector2( -1077.43, -158.479 )
 scale = Vector2( 0.90625, 1.8925 )
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="Sprite2" type="Sprite" parent="Floor2/Floor186"]
 position = Vector2( 12136.1, -159.94 )
 scale = Vector2( 0.90625, 1.8925 )
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor186"]
 position = Vector2( -1080.75, -2.73605 )
@@ -1288,7 +1303,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor9"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor9"]
 shape = SubResource( 1 )
@@ -1301,7 +1316,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor14"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor14"]
 shape = SubResource( 1 )
@@ -1314,7 +1329,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor13"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor13"]
 shape = SubResource( 1 )
@@ -1327,7 +1342,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor15"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor15"]
 shape = SubResource( 1 )
@@ -1340,7 +1355,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor16"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor16"]
 shape = SubResource( 1 )
@@ -1352,7 +1367,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor38"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor38"]
 shape = SubResource( 1 )
@@ -1364,7 +1379,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor141"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor141"]
 shape = SubResource( 1 )
@@ -1376,7 +1391,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor99"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor99"]
 shape = SubResource( 1 )
@@ -1388,7 +1403,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor161"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor161"]
 shape = SubResource( 1 )
@@ -1400,7 +1415,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor67"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor67"]
 shape = SubResource( 1 )
@@ -1412,7 +1427,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor117"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor117"]
 shape = SubResource( 1 )
@@ -1424,7 +1439,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor77"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor77"]
 shape = SubResource( 1 )
@@ -1436,7 +1451,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor105"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor105"]
 shape = SubResource( 1 )
@@ -1448,7 +1463,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor187"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor187"]
 shape = SubResource( 1 )
@@ -1460,7 +1475,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor52"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor52"]
 shape = SubResource( 1 )
@@ -1472,7 +1487,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor134"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor134"]
 shape = SubResource( 1 )
@@ -1484,7 +1499,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor92"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor92"]
 shape = SubResource( 1 )
@@ -1496,7 +1511,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor150"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor150"]
 shape = SubResource( 1 )
@@ -1508,7 +1523,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor177"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor177"]
 shape = SubResource( 1 )
@@ -1520,7 +1535,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor61"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor61"]
 shape = SubResource( 1 )
@@ -1532,7 +1547,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor125"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor125"]
 shape = SubResource( 1 )
@@ -1544,7 +1559,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor83"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor83"]
 shape = SubResource( 1 )
@@ -1556,7 +1571,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor151"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor151"]
 shape = SubResource( 1 )
@@ -1568,7 +1583,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor188"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor188"]
 shape = SubResource( 1 )
@@ -1580,7 +1595,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor44"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor44"]
 shape = SubResource( 1 )
@@ -1592,7 +1607,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor140"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor140"]
 shape = SubResource( 1 )
@@ -1604,7 +1619,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor98"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor98"]
 shape = SubResource( 1 )
@@ -1616,7 +1631,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor164"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor164"]
 shape = SubResource( 1 )
@@ -1628,7 +1643,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor66"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor66"]
 shape = SubResource( 1 )
@@ -1640,7 +1655,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor114"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor114"]
 shape = SubResource( 1 )
@@ -1652,7 +1667,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor74"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor74"]
 shape = SubResource( 1 )
@@ -1664,7 +1679,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor107"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor107"]
 shape = SubResource( 1 )
@@ -1676,7 +1691,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor174"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor174"]
 shape = SubResource( 1 )
@@ -1688,7 +1703,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor51"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor51"]
 shape = SubResource( 1 )
@@ -1700,7 +1715,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor143"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor143"]
 shape = SubResource( 1 )
@@ -1712,7 +1727,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor101"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor101"]
 shape = SubResource( 1 )
@@ -1724,7 +1739,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor162"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor162"]
 shape = SubResource( 1 )
@@ -1736,7 +1751,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor192"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor192"]
 shape = SubResource( 1 )
@@ -1748,7 +1763,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor69"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor69"]
 shape = SubResource( 1 )
@@ -1760,7 +1775,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor121"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor121"]
 shape = SubResource( 1 )
@@ -1772,7 +1787,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor80"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor80"]
 shape = SubResource( 1 )
@@ -1784,7 +1799,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor147"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor147"]
 shape = SubResource( 1 )
@@ -1796,7 +1811,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor193"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor193"]
 shape = SubResource( 1 )
@@ -1808,7 +1823,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor40"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor40"]
 shape = SubResource( 1 )
@@ -1820,7 +1835,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor128"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor128"]
 shape = SubResource( 1 )
@@ -1832,7 +1847,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor86"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor86"]
 shape = SubResource( 1 )
@@ -1844,7 +1859,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor153"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor153"]
 shape = SubResource( 1 )
@@ -1856,7 +1871,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor55"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor55"]
 shape = SubResource( 1 )
@@ -1868,7 +1883,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor112"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor112"]
 shape = SubResource( 1 )
@@ -1880,7 +1895,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor72"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor72"]
 shape = SubResource( 1 )
@@ -1892,7 +1907,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor109"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor109"]
 shape = SubResource( 1 )
@@ -1904,7 +1919,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor182"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor182"]
 shape = SubResource( 1 )
@@ -1916,7 +1931,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor47"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor47"]
 shape = SubResource( 1 )
@@ -1928,7 +1943,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor139"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor139"]
 shape = SubResource( 1 )
@@ -1940,7 +1955,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor97"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor97"]
 shape = SubResource( 1 )
@@ -1952,7 +1967,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor165"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor165"]
 shape = SubResource( 1 )
@@ -1964,7 +1979,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor173"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor173"]
 shape = SubResource( 1 )
@@ -1976,7 +1991,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor65"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor65"]
 shape = SubResource( 1 )
@@ -1988,7 +2003,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor111"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor111"]
 shape = SubResource( 1 )
@@ -2000,7 +2015,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor71"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor71"]
 shape = SubResource( 1 )
@@ -2012,7 +2027,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor122"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor122"]
 shape = SubResource( 1 )
@@ -2024,7 +2039,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor178"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor178"]
 shape = SubResource( 1 )
@@ -2036,7 +2051,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor43"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor43"]
 shape = SubResource( 1 )
@@ -2048,7 +2063,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor137"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor137"]
 shape = SubResource( 1 )
@@ -2060,7 +2075,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor95"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor95"]
 shape = SubResource( 1 )
@@ -2072,7 +2087,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor145"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor145"]
 shape = SubResource( 1 )
@@ -2084,7 +2099,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor184"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor184"]
 shape = SubResource( 1 )
@@ -2096,7 +2111,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor63"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor63"]
 shape = SubResource( 1 )
@@ -2108,7 +2123,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor116"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor116"]
 shape = SubResource( 1 )
@@ -2120,7 +2135,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor76"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor76"]
 shape = SubResource( 1 )
@@ -2132,7 +2147,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor103"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor103"]
 shape = SubResource( 1 )
@@ -2144,7 +2159,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor179"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor179"]
 shape = SubResource( 1 )
@@ -2156,7 +2171,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor49"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor49"]
 shape = SubResource( 1 )
@@ -2168,7 +2183,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor132"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor132"]
 shape = SubResource( 1 )
@@ -2180,7 +2195,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor90"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor90"]
 shape = SubResource( 1 )
@@ -2192,7 +2207,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor159"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor159"]
 shape = SubResource( 1 )
@@ -2204,7 +2219,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor172"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor172"]
 shape = SubResource( 1 )
@@ -2216,7 +2231,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor59"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor59"]
 shape = SubResource( 1 )
@@ -2228,7 +2243,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor113"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor113"]
 shape = SubResource( 1 )
@@ -2240,7 +2255,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor73"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor73"]
 shape = SubResource( 1 )
@@ -2252,7 +2267,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor104"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor104"]
 shape = SubResource( 1 )
@@ -2264,7 +2279,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor191"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor191"]
 shape = SubResource( 1 )
@@ -2276,7 +2291,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor39"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor39"]
 shape = SubResource( 1 )
@@ -2288,7 +2303,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor142"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor142"]
 shape = SubResource( 1 )
@@ -2300,7 +2315,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor100"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor100"]
 shape = SubResource( 1 )
@@ -2312,7 +2327,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor163"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor163"]
 shape = SubResource( 1 )
@@ -2324,7 +2339,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor68"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor68"]
 shape = SubResource( 1 )
@@ -2336,7 +2351,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor119"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor119"]
 shape = SubResource( 1 )
@@ -2348,7 +2363,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor78"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor78"]
 shape = SubResource( 1 )
@@ -2360,7 +2375,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor108"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor108"]
 shape = SubResource( 1 )
@@ -2372,7 +2387,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor167"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor167"]
 shape = SubResource( 1 )
@@ -2384,7 +2399,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor53"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor53"]
 shape = SubResource( 1 )
@@ -2396,7 +2411,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor135"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor135"]
 shape = SubResource( 1 )
@@ -2408,7 +2423,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor93"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor93"]
 shape = SubResource( 1 )
@@ -2420,7 +2435,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor160"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor160"]
 shape = SubResource( 1 )
@@ -2432,7 +2447,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor185"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor185"]
 shape = SubResource( 1 )
@@ -2444,7 +2459,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor62"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor62"]
 shape = SubResource( 1 )
@@ -2456,7 +2471,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor126"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor126"]
 shape = SubResource( 1 )
@@ -2468,7 +2483,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor84"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor84"]
 shape = SubResource( 1 )
@@ -2480,7 +2495,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor144"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor144"]
 shape = SubResource( 1 )
@@ -2492,7 +2507,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor171"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor171"]
 shape = SubResource( 1 )
@@ -2504,7 +2519,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor45"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor45"]
 shape = SubResource( 1 )
@@ -2516,7 +2531,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor130"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor130"]
 shape = SubResource( 1 )
@@ -2528,7 +2543,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor88"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor88"]
 shape = SubResource( 1 )
@@ -2540,7 +2555,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor156"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor156"]
 shape = SubResource( 1 )
@@ -2552,7 +2567,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor183"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor183"]
 shape = SubResource( 1 )
@@ -2564,7 +2579,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor57"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor57"]
 shape = SubResource( 1 )
@@ -2576,7 +2591,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor115"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor115"]
 shape = SubResource( 1 )
@@ -2588,7 +2603,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor75"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor75"]
 shape = SubResource( 1 )
@@ -2600,7 +2615,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor106"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor106"]
 shape = SubResource( 1 )
@@ -2612,7 +2627,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor190"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor190"]
 shape = SubResource( 1 )
@@ -2624,7 +2639,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor48"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor48"]
 shape = SubResource( 1 )
@@ -2636,7 +2651,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor131"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor131"]
 shape = SubResource( 1 )
@@ -2648,7 +2663,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor89"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor89"]
 shape = SubResource( 1 )
@@ -2660,7 +2675,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor152"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor152"]
 shape = SubResource( 1 )
@@ -2672,7 +2687,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor170"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor170"]
 shape = SubResource( 1 )
@@ -2684,7 +2699,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor58"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor58"]
 shape = SubResource( 1 )
@@ -2696,7 +2711,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor120"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor120"]
 shape = SubResource( 1 )
@@ -2708,7 +2723,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor79"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor79"]
 shape = SubResource( 1 )
@@ -2720,7 +2735,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor102"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor102"]
 shape = SubResource( 1 )
@@ -2732,7 +2747,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor169"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor169"]
 shape = SubResource( 1 )
@@ -2744,7 +2759,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor41"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor41"]
 shape = SubResource( 1 )
@@ -2756,7 +2771,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor127"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor127"]
 shape = SubResource( 1 )
@@ -2768,7 +2783,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor85"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor85"]
 shape = SubResource( 1 )
@@ -2780,7 +2795,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor157"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor157"]
 shape = SubResource( 1 )
@@ -2792,7 +2807,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor54"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor54"]
 shape = SubResource( 1 )
@@ -2804,7 +2819,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor136"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor136"]
 shape = SubResource( 1 )
@@ -2816,7 +2831,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor94"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor94"]
 shape = SubResource( 1 )
@@ -2828,7 +2843,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor154"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor154"]
 shape = SubResource( 1 )
@@ -2840,7 +2855,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor181"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor181"]
 shape = SubResource( 1 )
@@ -2852,7 +2867,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor46"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor46"]
 shape = SubResource( 1 )
@@ -2864,7 +2879,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor129"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor129"]
 shape = SubResource( 1 )
@@ -2876,7 +2891,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor87"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor87"]
 shape = SubResource( 1 )
@@ -2888,7 +2903,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor155"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor155"]
 shape = SubResource( 1 )
@@ -2900,7 +2915,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor189"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor189"]
 shape = SubResource( 1 )
@@ -2912,7 +2927,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor56"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor56"]
 shape = SubResource( 1 )
@@ -2924,7 +2939,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor124"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor124"]
 shape = SubResource( 1 )
@@ -2936,7 +2951,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor82"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor82"]
 shape = SubResource( 1 )
@@ -2948,7 +2963,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor158"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor158"]
 shape = SubResource( 1 )
@@ -2960,7 +2975,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor180"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor180"]
 shape = SubResource( 1 )
@@ -2972,7 +2987,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor42"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor42"]
 shape = SubResource( 1 )
@@ -2984,7 +2999,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor138"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor138"]
 shape = SubResource( 1 )
@@ -2996,7 +3011,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor96"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor96"]
 shape = SubResource( 1 )
@@ -3008,7 +3023,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor146"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor146"]
 shape = SubResource( 1 )
@@ -3020,7 +3035,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor195"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor195"]
 shape = SubResource( 1 )
@@ -3032,7 +3047,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor64"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor64"]
 shape = SubResource( 1 )
@@ -3044,7 +3059,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor110"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor110"]
 shape = SubResource( 1 )
@@ -3056,7 +3071,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor70"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor70"]
 shape = SubResource( 1 )
@@ -3068,7 +3083,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor118"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor118"]
 shape = SubResource( 1 )
@@ -3080,7 +3095,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor194"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor194"]
 shape = SubResource( 1 )
@@ -3092,7 +3107,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor50"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor50"]
 shape = SubResource( 1 )
@@ -3104,7 +3119,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor133"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor133"]
 shape = SubResource( 1 )
@@ -3116,7 +3131,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor91"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor91"]
 shape = SubResource( 1 )
@@ -3128,7 +3143,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor149"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor149"]
 shape = SubResource( 1 )
@@ -3140,7 +3155,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor168"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor168"]
 shape = SubResource( 1 )
@@ -3152,7 +3167,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor60"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor60"]
 shape = SubResource( 1 )
@@ -3164,7 +3179,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor123"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor123"]
 shape = SubResource( 1 )
@@ -3176,7 +3191,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor81"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor81"]
 shape = SubResource( 1 )
@@ -3188,7 +3203,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor148"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor148"]
 shape = SubResource( 1 )
@@ -3200,7 +3215,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor176"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor176"]
 shape = SubResource( 1 )
@@ -3212,7 +3227,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor33"]
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor33"]
 shape = SubResource( 1 )
@@ -3227,7 +3242,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Floor2/Floor166"]
 position = Vector2( 1582.14, 23.3503 )
 scale = Vector2( 47.0907, 1.36485 )
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor166"]
 shape = SubResource( 1 )
@@ -3242,7 +3257,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Floor2/Floor175"]
 position = Vector2( 1582.14, 23.3503 )
 scale = Vector2( 47.0907, 1.36485 )
-texture = ExtResource( 20 )
+texture = ExtResource( 25 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor175"]
 shape = SubResource( 1 )
@@ -3254,18 +3269,18 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Floor2/Floor32"]
-texture = ExtResource( 21 )
+texture = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2/Floor32"]
 shape = SubResource( 1 )
 
-[node name="Clouds" parent="." instance=ExtResource( 22 )]
+[node name="Clouds" parent="." instance=ExtResource( 27 )]
 position = Vector2( 3020.17, -445.073 )
 
-[node name="Clouds2" parent="." instance=ExtResource( 22 )]
+[node name="Clouds2" parent="." instance=ExtResource( 27 )]
 position = Vector2( -3739.49, 441.025 )
 
-[node name="Fly" parent="." instance=ExtResource( 23 )]
+[node name="Fly" parent="." instance=ExtResource( 28 )]
 position = Vector2( 3759.81, -3904.22 )
 
 [node name="Light2D" type="Light2D" parent="Fly"]
@@ -3279,7 +3294,7 @@ shadow_gradient_length = 5.0
 shadow_filter = 2
 shadow_filter_smooth = 5.0
 
-[node name="Bob" parent="." instance=ExtResource( 24 )]
+[node name="Bob" parent="." instance=ExtResource( 29 )]
 position = Vector2( 3653.99, -3077.27 )
 
 [node name="Light2D" type="Light2D" parent="Bob"]
@@ -3293,7 +3308,7 @@ shadow_gradient_length = 5.0
 shadow_filter = 2
 shadow_filter_smooth = 5.0
 
-[node name="Beb" parent="." instance=ExtResource( 25 )]
+[node name="Beb" parent="." instance=ExtResource( 30 )]
 position = Vector2( 3501.53, -3071.26 )
 
 [node name="Light2D" type="Light2D" parent="Beb"]
@@ -3312,20 +3327,21 @@ visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 110.0
+wait_time = 10.0
 autostart = true
 
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 225.0
 autostart = true
 
-[node name="spawn1" parent="." instance=ExtResource( 26 )]
+[node name="spawn1" parent="." instance=ExtResource( 31 )]
 
-[node name="Spawn2" parent="." instance=ExtResource( 27 )]
+[node name="Spawn2" parent="." instance=ExtResource( 32 )]
 [connection signal="pressed" from="Camera/Camera2D2/Button" to="Camera/Camera2D2/Button" method="_on_Button_pressed"]
 [connection signal="pressed" from="Camera/Camera2D2/Button3" to="Camera/Camera2D2/Button3" method="_on_Button3_pressed"]
 [connection signal="pressed" from="Camera/Camera2D2/Button4" to="Camera/Camera2D2/Button4" method="_on_Button4_pressed"]
 [connection signal="pressed" from="Camera/Camera2D2/Button5" to="Camera/Camera2D2/Button5" method="_on_Button5_pressed"]
+[connection signal="pressed" from="Camera/Camera2D2/Button6" to="Camera/Camera2D2/Button6" method="_on_Button5_pressed"]
 [connection signal="pressed" from="Camera/Camera2D2/Button2" to="Camera/Camera2D2/Button2" method="_on_Button2_pressed"]
 [connection signal="timeout" from="Timer" to="Camera/Camera2D2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="Camera/Camera2D2" method="_on_Timer2_timeout"]

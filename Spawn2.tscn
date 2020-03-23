@@ -51,80 +51,83 @@ animations = [ {
 bounce = 0.2
 
 [node name="Spawn2" type="Node2D"]
-editor/display_folded = true
+position = Vector2( -7.11548, -2.93732 )
 
-[node name="Ghost79" parent="." instance=ExtResource( 1 )]
-position = Vector2( 502.673, 241.23 )
+[node name="spawnpoint" type="Node2D" parent="."]
+position = Vector2( 116.935, 1.10672 )
+
+[node name="Ghost79" parent="spawnpoint" instance=ExtResource( 1 )]
+position = Vector2( 388.989, 243.335 )
 frames = SubResource( 1 )
 
-[node name="Ghost88" parent="." instance=ExtResource( 3 )]
-position = Vector2( 374.673, 241.23 )
+[node name="Ghost88" parent="spawnpoint" instance=ExtResource( 3 )]
+position = Vector2( 260.989, 243.335 )
 frames = SubResource( 2 )
 
-[node name="Ghost89" parent="." instance=ExtResource( 3 )]
-position = Vector2( 118.721, 241.22 )
+[node name="Ghost89" parent="spawnpoint" instance=ExtResource( 3 )]
+position = Vector2( 5.0368, 243.325 )
 frames = SubResource( 2 )
 
-[node name="Ghost85" parent="." instance=ExtResource( 3 )]
-position = Vector2( 246.673, 241.23 )
+[node name="Ghost85" parent="spawnpoint" instance=ExtResource( 3 )]
+position = Vector2( 132.989, 243.335 )
 frames = SubResource( 2 )
 
-[node name="Ghost91" parent="." instance=ExtResource( 3 )]
-position = Vector2( -9.27881, 241.22 )
+[node name="Ghost91" parent="spawnpoint" instance=ExtResource( 3 )]
+position = Vector2( -122.963, 243.325 )
 frames = SubResource( 2 )
 
-[node name="Ghost92" parent="." instance=ExtResource( 3 )]
-position = Vector2( -137.279, 241.22 )
+[node name="Ghost92" parent="spawnpoint" instance=ExtResource( 3 )]
+position = Vector2( -250.963, 243.325 )
 frames = SubResource( 2 )
 
-[node name="Ghost66" parent="." instance=ExtResource( 5 )]
-position = Vector2( -265.269, 241.21 )
+[node name="Ghost66" parent="spawnpoint" instance=ExtResource( 5 )]
+position = Vector2( -378.953, 243.315 )
 frames = SubResource( 3 )
 
-[node name="Blocks229" parent="." instance=ExtResource( 7 )]
-position = Vector2( 172.623, 111.8 )
+[node name="Blocks229" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 58.9388, 113.905 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks223" parent="." instance=ExtResource( 7 )]
-position = Vector2( 180.313, -24.3501 )
+[node name="Blocks223" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 66.6288, -22.2448 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks242" parent="." instance=ExtResource( 7 )]
-position = Vector2( -232.379, -26.2002 )
+[node name="Blocks242" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -346.063, -24.0949 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks202" parent="." instance=ExtResource( 7 )]
-position = Vector2( -237.539, 108.25 )
+[node name="Blocks202" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -351.223, 110.355 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks220" parent="." instance=ExtResource( 7 )]
-position = Vector2( 318.483, 109.49 )
+[node name="Blocks220" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 204.799, 111.595 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks207" parent="." instance=ExtResource( 7 )]
-position = Vector2( 321.744, -25.8701 )
+[node name="Blocks207" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 208.06, -23.7648 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks212" parent="." instance=ExtResource( 7 )]
-position = Vector2( -90.9489, -27.7202 )
+[node name="Blocks212" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -204.633, -25.6149 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks217" parent="." instance=ExtResource( 7 )]
-position = Vector2( -99.4188, 106.63 )
+[node name="Blocks217" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -213.103, 108.735 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks200" parent="." instance=ExtResource( 7 )]
-position = Vector2( 460.673, 111.57 )
+[node name="Blocks200" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 346.989, 113.675 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks172" parent="." instance=ExtResource( 7 )]
-position = Vector2( 458.043, -25.6902 )
+[node name="Blocks172" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( 344.359, -23.5849 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks186" parent="." instance=ExtResource( 7 )]
-position = Vector2( 45.3511, -27.5403 )
+[node name="Blocks186" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -68.3331, -25.435 )
 physics_material_override = SubResource( 4 )
 
-[node name="Blocks198" parent="." instance=ExtResource( 7 )]
-position = Vector2( 36.8811, 106.81 )
+[node name="Blocks198" parent="spawnpoint" instance=ExtResource( 7 )]
+position = Vector2( -76.8031, 108.915 )
 physics_material_override = SubResource( 4 )
