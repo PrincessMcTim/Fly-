@@ -4,6 +4,7 @@ const PEE = preload("res://pee.tscn")
 const PEE2 = preload("res://pee2.tscn")
 const BUILD1 = preload("res://Spawn1.tscn")
 const BUILD2 = preload("res://Spawn2.tscn")
+const BUILD22 = preload("res://Spawn22.tscn")
 
 var speed = 750
 var jump_speed = 1900
@@ -14,7 +15,7 @@ var distance = Vector2()
 var jump = 1
 var pee_load = 1
 var timer = 1
-var build1 = 2
+var build = 0
 var pre = 1
 
 func _physics_process(delta):
@@ -69,14 +70,19 @@ func _move(delta):
 
     if Input.is_action_just_pressed("build"):
         var spawn1 = null
-        if build1 > 1:
+        if build > 0:
             if pre == 1:
                 spawn1 = BUILD1.instance()
             elif pre == 2:
-                spawn1 = BUILD2.instance()
+                if global.spawnpoint == 2:
+                    spawn1 = BUILD22.instance()
+                else:
+                    spawn1 = BUILD2.instance()
             
             get_parent().add_child(spawn1)
             spawn1.position = $PositionBuild.global_position
+            
+            build = build - 1
 
 
     if Input.is_action_just_pressed("prew"):
@@ -91,6 +97,10 @@ func _move(delta):
     if Input.is_action_just_released("prew"):
         $PositionBuild/Spawn.play("0")
 
+
+
+func build5():
+    build = build + 4
  
 func pee5():
     pee_load = pee_load + 5

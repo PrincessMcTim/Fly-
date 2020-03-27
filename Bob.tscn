@@ -35,14 +35,14 @@ animations = [ {
 "name": "build",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": false,
-"name": "build2",
-"speed": 5.0
-}, {
 "frames": [ null ],
 "loop": false,
 "name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "build2",
 "speed": 5.0
 } ]
 
