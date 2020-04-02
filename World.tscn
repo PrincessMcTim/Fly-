@@ -2134,10 +2134,12 @@ position = Vector2( 5253, 3109 )
 [node name="pup" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6379, 1394 )
 scale = Vector2( 0.7, 0.7 )
+frame = 3
 
 [node name="pup2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6360, 2575 )
 scale = Vector2( 0.7, 0.7 )
+frame = 3
 
 [node name="Clouds" parent="." instance=ExtResource( 14 )]
 position = Vector2( -4499, 3075 )

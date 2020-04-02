@@ -3,6 +3,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+# warning-ignore:unused_class_variable
 var spawnpoint = 0
 # warning-ignore:unused_class_variable
 var peefill_bob = 0

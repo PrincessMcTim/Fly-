@@ -4,6 +4,7 @@ const PEE = preload("res://pee.tscn")
 const PEE2 = preload("res://pee2.tscn")
 const BUILD1 = preload("res://Spawn1.tscn")
 const BUILD2 = preload("res://Spawn2.tscn")
+const BUILD22 = preload("res://Spawn22.tscn")
 
 var speed = 750
 var jump_speed = 1900
@@ -36,7 +37,11 @@ func _physics_process(delta):
     
     if pre == 3:
         pre = 1
-    
+    if global.spawnpoint == 2:
+        if sign($PositionBuild.position.x) == 1:
+                $PositionBuild.position.x *= -1
+        $PositionBuild/Spawn.flip_h = true  
+  
     if is_on_floor():
         velocity.y = 0
         direction.y = 0
@@ -72,7 +77,10 @@ func _physics_process(delta):
             if pre == 1:
                 spawn1 = BUILD1.instance()
             elif pre == 2:
-                spawn1 = BUILD2.instance()
+                if global.spawnpoint == 2:
+                    spawn1 = BUILD22.instance()
+                else:
+                    spawn1 = BUILD2.instance()
             
             get_parent().add_child(spawn1)
             spawn1.position = $PositionBuild.global_position
