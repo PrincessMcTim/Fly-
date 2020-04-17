@@ -1,7 +1,7 @@
 extends Camera2D
 
-var SPEED = 60
-var SPEED2 = 40
+var SPEED = 80
+var SPEED2 = 60
 var velocity = Vector2()
 var direction = 1
 var camera = 1

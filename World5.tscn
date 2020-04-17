@@ -366,41 +366,39 @@ editor/display_folded = true
 [node name="pup" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 6365, 2711 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
 
 [node name="pup2" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 4128, 812 )
 scale = Vector2( 0.7, 0.7 )
+frame = 3
 
 [node name="pup3" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 8538, 881 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 2
 
 [node name="pup4" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 6339, -75.9999 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 2
 
 [node name="pup5" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 4071, -1477 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
 
 [node name="pup6" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 8267, -1437 )
 scale = Vector2( 0.7, 0.7 )
-frame = 1
 
 [node name="pup7" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 5545, -3305 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 2
 
 [node name="pup8" parent="Powerups" instance=ExtResource( 6 )]
 position = Vector2( 7160, -3312 )
 scale = Vector2( 0.7, 0.7 )
-frame = 4
+frame = 2
 
 [node name="Blocks" type="Node2D" parent="."]
 editor/display_folded = true
