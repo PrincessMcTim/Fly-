@@ -4,6 +4,14 @@ extends Node
 # var a = 2
 # var b = "text"
 # warning-ignore:unused_class_variable
+var beb_kill = 0
+# warning-ignore:unused_class_variable
+var bob_kill = 0
+# warning-ignore:unused_class_variable
+var beb_wins = 0
+# warning-ignore:unused_class_variable
+var bob_wins = 0
+# warning-ignore:unused_class_variable
 var spawnpoint = 0
 # warning-ignore:unused_class_variable
 var peefill_bob = 0

@@ -37,6 +37,16 @@ func _physics_process(delta):
     
     if pre == 3:
         pre = 1
+        
+    if global.beb_kill == 1:
+        if timer == 1:
+            $Timer.start()
+            $Timer2.start()
+            $AnimatedSprite.play("death")
+            global.beb_kill = 0  
+            timer = 0
+                
+
     if global.spawnpoint == 2:
         if sign($PositionBuild.position.x) == 1:
                 $PositionBuild.position.x *= -1

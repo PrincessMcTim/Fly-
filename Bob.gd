@@ -23,6 +23,15 @@ func _physics_process(delta):
     global.peefill_bob = pee_load
     if pre == 3:
         pre = 1
+        
+    if global.bob_kill == 1:
+        if timer == 1:
+            $Timer.start()
+            $Timer2.start()
+            $AnimatedSprite.play("death")
+            global.bob_kill = 0
+            timer = 0   
+    
     if global.spawnpoint == 2:
         if sign($PositionBuild.position.x) == 1:
                 $PositionBuild.position.x *= -1
@@ -96,7 +105,6 @@ func _move(delta):
 
     if Input.is_action_just_released("prew"):
         $PositionBuild/Spawn.play("0")
-
 
 
 func build5():
