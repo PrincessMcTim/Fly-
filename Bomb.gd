@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 # Declare member variables here. Examples:
-# var a = 2
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +12,16 @@ func _ready():
 #    pass
 
 
-func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
-    apply_impulse(Vector2(0,0), Vector2(550,0))
+func _on_Timer_timeout():
+    $Bomb.play("Explode")
+    $Fuse.play("Stop")
+
+
+
+        
+
+
+func _on_Timer2_timeout():
+    global.Trigger = 1
+    queue_free()
+

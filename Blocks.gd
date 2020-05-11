@@ -14,6 +14,13 @@ func _on_Area2D_body_entered(body):
         body.JumpPower_jump()
     if "Beb" in body.name:
         body.JumpPower_jump()
+        
+    if "Bomb" in body.name:
+        if global.Trigger == 1:
+            print("aaaaaaaaaaaaaa")
+            queue_free()
+               
+    
 
 func _on_Area2D_body_exited(body):
     if "Bob" in body.name:

@@ -72,7 +72,6 @@ z_index = -2
 texture = ExtResource( 1 )
 
 [node name="Blocks" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Blocks" parent="Blocks" instance=ExtResource( 2 )]
 position = Vector2( -832.708, 3468.66 )
@@ -2061,7 +2060,6 @@ texture = ExtResource( 5 )
 shape = SubResource( 1 )
 
 [node name="GhostFloor" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Ghost15" parent="GhostFloor" instance=ExtResource( 6 )]
 position = Vector2( 6546, 3130 )
@@ -2141,12 +2139,12 @@ position = Vector2( 5253, 3109 )
 [node name="pup" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6379, 1394 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 1
 
 [node name="pup2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 6360, 2575 )
 scale = Vector2( 0.7, 0.7 )
-frame = 3
+frame = 1
 
 [node name="Clouds" parent="." instance=ExtResource( 14 )]
 position = Vector2( -4499, 3075 )
@@ -2162,5 +2160,5 @@ scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 16 )
 
 [node name="Bomb" parent="." instance=ExtResource( 17 )]
-position = Vector2( 4815.23, 2286.72 )
+position = Vector2( 4802.52, 2016.33 )
 physics_material_override = SubResource( 2 )
